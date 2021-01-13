@@ -1,0 +1,26 @@
+#two {
+    height: 50px;
+    width: 400px;
+    border: 4px;
+    text-align: center;
+    margin-left: 700px;
+    color: wheat;
+    background-color: red;
+    font-size: 30px;
+    font-style: italic;
+}
+
+#one {
+    height: 100px;
+    width: 400px;
+    border: 4px;
+    margin-left: 700px;
+    background-color: cadetblue;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#three {
+    margin-top: 20px;
+}
