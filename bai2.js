@@ -1,31 +1,20 @@
 function merge2String(string1, string2) {
-    var input1 = string1;
-    var input1arr = input1.split('');
-
-    var input2 = string2;
-    var input2arr = input2.split('');
-
-    var finalString = '';
-    var j = 0;
-
-for(let i = 0; i < input1arr.length; i++) {
-    finalString += input1arr[i];
-    for(j = i; j < i + 1; j++) {
-        if(input2arr[j] == undefined) {
-            finalString += '';
-        }else {
-            finalString += input2arr[j];
+    let rs = "";
+    let arr1 = [...string1];
+    let arr2 = [...string2];
+    let lengthArr1 = arr1.length;
+    let lengthArr2 = arr2.length;
+    let max = lengthArr1 > lengthArr2 ? lengthArr1 : lengthArr2;
+    for (let i = 0; i < max; i++) {
+        if (arr1[i] != null) {
+            rs += arr1[i];
         }
+        if (arr2[i] != null) {
+            rs += arr2[i];
         }
     }
-    if(input2arr.length > input1arr.length) {
-        for(let k = j; k < input2arr.length; k++ ) {
-            finalString += input2arr[k];
-        }
-    }
-    return finalString;
+    return rs;
 }
-
 console.log(merge2String('abc', '123'));
 console.log(merge2String('abc', '0123'));
 console.log(merge2String('abcd', '123'));
